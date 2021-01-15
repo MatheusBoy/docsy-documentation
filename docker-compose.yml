@@ -1,0 +1,11 @@
+version: '3.9'
+services: 
+  hugo_server:
+    # stdin_open: true
+    build: 
+      context: .
+      dockerfile: dev.Dockerfile
+    ports:
+      - "1313:1313"
+    volumes:
+      - .:/home/docsy/app
